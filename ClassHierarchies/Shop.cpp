@@ -27,7 +27,9 @@ void Shop::AddProduct(Product* pProduct)
 	//We must delete it because the way the Shop is in charge of deleting the products
 	if (m_numProducts >= m_maxNumProducts)
 	{
-		cout << "Product deleted for lack of space in shop: " << pProduct->Print();
+		cout << "Product deleted for lack of space in shop: \n";
+		pProduct->Print();
+		cout << "------------------------------\n";
 		delete pProduct;
 		return;
 	}

@@ -4,10 +4,17 @@
 #include <iostream>
 using namespace std;
 
-Product::Product()
+int Product::m_lastId = 0;
+
+Product::Product(const char* name, double price)
 {
-	m_name = nullptr;
-	m_price = 0.0;
+	m_lastId++;
+	m_id = m_lastId;
+
+	m_name = new char[strlen(name) + 1];
+	strcpy_s(m_name, strlen(name) + 1, name);
+
+	m_price = price;
 }
 
 Product::~Product()
@@ -39,5 +46,5 @@ void Product::SetPrice(double price)
 
 void Product::Print()
 {
-	cout << "Name: " << Name() << " Price: " << Price() << "\n";
+	cout << "PRODUCT  Name: " << Name() << " Id: " << m_id << " Price: " << Price() << "\n";
 }
