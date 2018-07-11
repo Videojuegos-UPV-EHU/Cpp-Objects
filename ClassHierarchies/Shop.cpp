@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Shop.h"
+#include "Book.h"
 #include <iostream>
 using namespace std;
 
@@ -43,5 +44,14 @@ void Shop::Print()
 	for (int i = 0; i < m_numProducts; i++)
 	{
 		m_products[i]->Print();
+	}
+}
+
+void Shop::PrintAllBooks()
+{
+	for (int i = 0; i < m_numProducts; i++)
+	{
+		if (dynamic_cast<Book*>(m_products[i]) != nullptr)
+			m_products[i]->Print();
 	}
 }

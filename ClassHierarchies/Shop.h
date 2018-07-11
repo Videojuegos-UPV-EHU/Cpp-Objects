@@ -13,5 +13,6 @@ public:
 
 	void AddProduct(Product* pProduct);
 	void Print();
+	void PrintAllBooks();
 };
 
