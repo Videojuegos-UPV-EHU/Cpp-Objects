@@ -23,7 +23,7 @@
     <ProjectGuid>{1F1575AA-BFB8-4656-B6E8-8286F7019AA3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ClassHierarchies</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
     <ProjectName>04.Interfaces</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
